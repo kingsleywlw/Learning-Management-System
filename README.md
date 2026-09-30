@@ -45,3 +45,53 @@ A full-stack Learning Management System (LMS) built with Next.js, React, TypeScr
 ```bash
 git clone https://github.com/kingsleywlw/Learning-Management-System.git
 cd Learning-Management-System
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file in the root directory and configure the required environment variables.
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Clerk credentials are also required for authentication. Add the appropriate Clerk environment variables for your Clerk application.
+
+> Do not commit `.env` or `.env.local` files to the repository.
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+## Project Structure
+
+```text
+actions/       Server-side actions
+app/           Application routes, pages, and API endpoints
+components/    Reusable UI components
+context/       React context providers
+db/            Database connection configuration
+hooks/         Custom React hooks
+models/        MongoDB/Mongoose models
+public/        Static assets
+types/         TypeScript type definitions
+utils/         Utility functions
+```
+
+## Security
+
+Sensitive configuration such as database credentials and authentication keys is managed through environment variables. Environment files are excluded from version control through `.gitignore`.
+
+## Project Context
+
+This application was developed as a team project to apply full-stack web development concepts including authentication, role-based access control, REST APIs, database integration, and modern React/Next.js development.
